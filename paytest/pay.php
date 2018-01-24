@@ -1,11 +1,11 @@
 <?php
 require_once("../paysys/kkb.utils.php");
 $self = $_SERVER['PHP_SELF'];
-$path1 = '../paysys/config.txt';	// Путь к файлу настроек config.dat
-$order_id = 1;				// Порядковый номер заказа - преобразуется в формат "000001"
-$currency_id = "398"; 			// Шифр валюты  - 840-USD, 398-Tenge
-$amount = 10;				// Сумма платежа
-$content = process_request($order_id,$currency_id,$amount,$path1); // Возвращает подписанный и base64 кодированный XML документ для отправки в банк
+$path1 = '../paysys/config.txt';	// ГЏГіГІГј ГЄ ГґГ Г©Г«Гі Г­Г Г±ГІГ°Г®ГҐГЄ config.dat
+$order_id = 1;				// ГЏГ®Г°ГїГ¤ГЄГ®ГўГ»Г© Г­Г®Г¬ГҐГ° Г§Г ГЄГ Г§Г  - ГЇГ°ГҐГ®ГЎГ°Г Г§ГіГҐГІГ±Гї Гў ГґГ®Г°Г¬Г ГІ "000001"
+$currency_id = "398"; 			// ГГЁГґГ° ГўГ Г«ГѕГІГ»  - 840-USD, 398-Tenge
+$amount = 10;				// Г‘ГіГ¬Г¬Г  ГЇГ«Г ГІГҐГ¦Г 
+$content = process_request($order_id,$currency_id,$amount,$path1); // Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ®Г¤ГЇГЁГ±Г Г­Г­Г»Г© ГЁ base64 ГЄГ®Г¤ГЁГ°Г®ГўГ Г­Г­Г»Г© XML Г¤Г®ГЄГіГ¬ГҐГ­ГІ Г¤Г«Гї Г®ГІГЇГ°Г ГўГЄГЁ Гў ГЎГ Г­ГЄ
 ?>
 <html>
 <head>
@@ -13,15 +13,15 @@ $content = process_request($order_id,$currency_id,$amount,$path1); // Возвращает
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 </head>
 <body>
-<form name="SendOrder" method="post" action="https://testpay.kkb.kz/jsp/process/logon.jsp">
+<form name="SendOrder" method="post" action="https://epay.kkb.kz/jsp/process/logon.jsp">
    <input type="hidden" name="Signed_Order_B64" value="<?php echo $content;?>">
    E-mail: <input type="text" name="email" size=50 maxlength=50  value="mirzoxid1992@gmail.com">
    <p>
-   <input type="hidden" name="Language" value="eng"> <!-- язык формы оплаты rus/eng -->
-   <input type="hidden" name="BackLink" value="http://merchant.loc/epay/paytest/pay.php">
-   <input type="hidden" name="PostLink" value="http://merchant.loc/epay/paytest/postlink.php">
-   Со счетом согласен (-а)<br>
-   <input type="submit" name="GotoPay"  value="Да, перейти к оплате" >&nbsp;
+   <input type="hidden" name="Language" value="eng"> <!-- ГїГ§Г»ГЄ ГґГ®Г°Г¬Г» Г®ГЇГ«Г ГІГ» rus/eng -->
+   <input type="hidden" name="BackLink" value="https://baibol.herokuapp.com/paytest/pay.php">
+   <input type="hidden" name="PostLink" value="https://baibol.herokuapp.com/paytest/postlink.php">
+   Г‘Г® Г±Г·ГҐГІГ®Г¬ Г±Г®ГЈГ«Г Г±ГҐГ­ (-Г )<br>
+   <input type="submit" name="GotoPay"  value="Г„Г , ГЇГҐГ°ГҐГ©ГІГЁ ГЄ Г®ГЇГ«Г ГІГҐ" >&nbsp;
 </form>
 </body>
 </html>
