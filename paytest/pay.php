@@ -2,7 +2,7 @@
 require_once("../paysys/kkb.utils.php");
 $self = $_SERVER['PHP_SELF'];
 $path1 = '../paysys/config.txt';	// Ïóòü ê ôàéëó íàñòðîåê config.dat
-$order_id = 1;				// Ïîðÿäêîâûé íîìåð çàêàçà - ïðåîáðàçóåòñÿ â ôîðìàò "000001"
+$order_id = rand(1, 100000);				// Ïîðÿäêîâûé íîìåð çàêàçà - ïðåîáðàçóåòñÿ â ôîðìàò "000001"
 $currency_id = "398"; 			// Øèôð âàëþòû  - 840-USD, 398-Tenge
 $amount = 10;				// Ñóììà ïëàòåæà
 $content = process_request($order_id,$currency_id,$amount,$path1); // Âîçâðàùàåò ïîäïèñàííûé è base64 êîäèðîâàííûé XML äîêóìåíò äëÿ îòïðàâêè â áàíê
