@@ -20,8 +20,8 @@ $content = process_request($order_id,$currency_id,$amount,$path1); // Âîçâð
    <input type="hidden" name="Language" value="eng"> <!-- ÿçûê ôîðìû îïëàòû rus/eng -->
    <input type="hidden" name="BackLink" value="https://baibol.herokuapp.com/paytest/pay.php">
    <input type="hidden" name="PostLink" value="https://baibol.herokuapp.com/paytest/postlink.php">
-   Ñî ñ÷åòîì ñîãëàñåí (-à)<br>
-   <input type="submit" name="GotoPay"  value="Äà, ïåðåéòè ê îïëàòå" >&nbsp;
+   Chiqimga tayyormisiz<br>
+   <input type="submit" name="GotoPay"  value="Unda bitta chertvoring ))" >&nbsp;
 </form>
 </body>
 </html>
