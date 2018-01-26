@@ -13,7 +13,7 @@ $content = process_request($order_id,$currency_id,$amount,$path1); // Âîçâð
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 </head>
 <body>
-<form name="SendOrder" method="post" action="https://epay.kkb.kz/jsp/process/logon.jsp">
+<form name="SendOrder" method="post" action="https://testpay.kkb.kz/jsp/process/logon.jsp">
    <input type="hidden" name="Signed_Order_B64" value="<?php echo $content;?>">
    E-mail: <input type="text" name="email" size=50 maxlength=50  value="mirzoxid1992@gmail.com">
    <p>
